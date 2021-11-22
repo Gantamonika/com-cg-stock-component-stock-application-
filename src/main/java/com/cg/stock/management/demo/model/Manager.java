@@ -14,7 +14,7 @@ public class Manager {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Manager(int managerId, String managerName, com.cg.stock.management.demo.model.Company company, String email,
+	public Manager(int managerId, String managerName,Company company, String email,
 			String mobileNo) {
 		super();
 		this.managerId = managerId;
