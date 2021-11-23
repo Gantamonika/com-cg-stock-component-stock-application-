@@ -1,19 +1,42 @@
 package com.cg.stock.management.demo.model;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Investor {
+public class Investor implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6380752144653268411L;
+
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int investorId;
+	
+	@Column
 	private String investorName;
+	
+	@Column
 	private String email;
+	
+	@Column
 	private String password;
+	
+	@Column
 	private String mobileNo;
+	
+	@Column
     private String gender;
+	
     @OneToOne
     @JoinColumn(name="accountNo")
 	private BankAccount account;
