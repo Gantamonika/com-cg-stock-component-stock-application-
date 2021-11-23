@@ -7,8 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.cg.spring.core.demo.model.Employee;
 import com.cg.stock.management.demo.exception.CompanyNotFoundException;
 import com.cg.stock.management.demo.exception.StockNotFoundException;
 import com.cg.stock.management.demo.model.Investor;

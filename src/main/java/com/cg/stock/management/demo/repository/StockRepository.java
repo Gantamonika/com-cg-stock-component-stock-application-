@@ -18,8 +18,8 @@ public interface StockRepository extends JpaRepository<Stock, Integer>{
 	@Query(name ="SELECT stockName FROM Stock WHERE Inverstor=inv")
 	public abstract List<Stock> findByInvestor(Investor inv);
 
-	public abstract List<Stock> viewAllGrowingStocks();
+	public abstract List<Stock> findbyGrowingStocks();
 	
-	public abstract List<Stock> viewAllReducingStocks();
+	public abstract List<Stock> findbyReducingStocks();
 
 }

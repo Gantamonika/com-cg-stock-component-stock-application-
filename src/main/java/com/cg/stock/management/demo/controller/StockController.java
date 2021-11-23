@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.cg.spring.core.demo.model.Employee;
 import com.cg.stock.management.demo.model.Stock;
 import com.cg.stock.management.demo.services.StockServices;
 
