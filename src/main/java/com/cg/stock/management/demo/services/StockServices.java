@@ -32,7 +32,7 @@ public class StockServices {
 	private InvestorRepository investorRepository;
 	
 	
-	public Stock addStockDetails(Stock stock) {
+	public Stock addStockDetails(Stock stock) throws CompanyNotFoundException{
 		
 		LOG.info("Service addStockDetails");
 		if (stockRepository.existsById(stock.getCompany().getCompanyId()))	
@@ -42,7 +42,7 @@ public class StockServices {
 	}
 	
 	
-	public Stock updateStockDetails(Stock stock) {
+	public Stock updateStockDetails(Stock stock) throws StockNotFoundException{
 		
 		LOG.info("Service updateStockDetails");
 		if (stockRepository.existsById(stock.getStockId()))
@@ -52,7 +52,7 @@ public class StockServices {
 	}
 	
 	
-	public Stock removeStockDetails(Stock stock) {
+	public Stock removeStockDetails(Stock stock) throws StockNotFoundException {
 		
 		LOG.info("removeStockDetails");
 		Optional<Stock> stkOpt = stockRepository.findById(stock.getStockId());
@@ -87,13 +87,13 @@ public class StockServices {
 
 	public List<Stock> viewStockByCompanyName(String name){
 		System.out.println("Service viewStockByCompanyName");
-		return stockRepository.findByCompanyName(name);
+		return null;//stockRepository.findByCompanyName(name);
 
 	}
 	
 	public List<Stock> viewStockByInvestor(Investor inv){
 		System.out.println("Service viewStockByInvestor");
-		return stockRepository.findByInvestor(inv);
+		return null;//stockRepository.findByInvestor(inv);
 
 	}
 

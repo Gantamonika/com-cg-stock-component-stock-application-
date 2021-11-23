@@ -12,14 +12,14 @@ import com.cg.stock.management.demo.model.Stock;
 @Repository
 public interface StockRepository extends JpaRepository<Stock, Integer>{
 
-	@Query(name = "SELECT stockName FROM Stock WHERE companyName IN(SELECT companyName FROM Company where companyName = name)") // JPQL
-	public abstract List<Stock> findByCompanyName(String name);
+	//@Query(name = "SELECT stockName FROM Stock WHERE companyName IN(SELECT companyName FROM Company where companyName = name)") // JPQL
+	//public abstract List<Stock> findByCompanyName(String name);
 	
-	@Query(name ="SELECT stockName FROM Stock WHERE Inverstor=inv")
-	public abstract List<Stock> findByInvestor(Investor inv);
+	//@Query(name ="SELECT stockName FROM Stock WHERE Inverstor=inv")
+	//public abstract List<Stock> findByInvestor(Investor inv);
 
-	public abstract List<Stock> findbyGrowingStocks();
-	
-	public abstract List<Stock> findbyReducingStocks();
+//	public abstract List<Stock> findbyGrowingStocks();
+//	
+//	public abstract List<Stock> findbyReducingStocks();
 
 }

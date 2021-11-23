@@ -1,10 +1,32 @@
 package com.cg.stock.management.demo.model;
 
-public class User {
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class User implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1902017989326291578L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int userId;
+	
+	@Column
 	private String userName;
+	
+	@Column
 	private String password;
+	
+	@Column
 	private String role;
 	
 	public User() {

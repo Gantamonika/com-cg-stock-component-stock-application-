@@ -1,5 +1,9 @@
 package com.cg.stock.management.demo.repository;
 
-public class InvestorRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.cg.stock.management.demo.model.Investor;
+
+public interface InvestorRepository extends JpaRepository<Investor, Integer>{
 
 }
