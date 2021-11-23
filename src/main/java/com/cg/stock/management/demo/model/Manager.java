@@ -1,9 +1,17 @@
 package com.cg.stock.management.demo.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+@Entity
 public class Manager {
-	
+	@Id
 	private int managerId;
 	private String managerName;
+	@OneToOne
+	@JoinColumn
 	private Company Company;
 	private String email;
 	private String mobileNo;

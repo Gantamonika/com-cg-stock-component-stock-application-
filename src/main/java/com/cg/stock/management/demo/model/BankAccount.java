@@ -1,7 +1,11 @@
 package com.cg.stock.management.demo.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class BankAccount {
-	
+	@Id
 	private long accountNo;
 	private String branchName;
 	private String bankName;

@@ -1,13 +1,21 @@
 package com.cg.stock.management.demo.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+@Entity
 public class Investor {
-	
+	@Id
 	private int investorId;
 	private String investorName;
 	private String email;
 	private String password;
 	private String mobileNo;
     private String gender;
+    @OneToOne
+    @JoinColumn(name="accountNo")
 	private BankAccount account;
 	
 	
