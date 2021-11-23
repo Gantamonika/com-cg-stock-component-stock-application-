@@ -89,13 +89,13 @@ public class StockServices {
 
 	public List<Stock> viewStockByCompanyName(String name){
 		System.out.println("Service viewStockByCompanyName");
-		return stockRepository.getStockByCompanyName(name);
+		return stockRepository.findByCompanyName(name);
 
 	}
 	
 	public List<Stock> viewStockByInvestor(Investor inv){
 		System.out.println("Service viewStockByInvestor");
-		return stockRepository.getStockByInvestor(inv);
+		return stockRepository.findByInvestor(inv);
 
 	}
 
